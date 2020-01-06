@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -34,6 +35,19 @@ public class HospitalServiceImpl implements HospitalService {
 
     @Override
     public void update(Hospital hospital) {
+        if (hospital == null){
+            throw new RuntimeException("参数非法");
+        }
+        if (hospital.getOid() == null){
+            throw new RuntimeException("参数非法");
+        }
+        Hospital hospitalMapperOneByOid = hospitalMapper.findOneByOid(hospital.getOid());
+        if (hospitalMapperOneByOid == null){
+            throw new RuntimeException("修改对象不存在");
+        }
+        if (hospital.getUpdatedOn() == null){
+            hospital.setUpdatedOn(new Date());
+        }
         hospitalMapper.update(hospital);
     }
 
@@ -43,12 +57,14 @@ public class HospitalServiceImpl implements HospitalService {
     }
 
     @Override
+    public List<Hospital> findAll() {
+        return hospitalMapper.findAll();
+    }
+
+    @Override
     public Hospital findOneByCode(String code) {
         return hospitalMapper.findOneByCode(code);
     }
 
-    @Override
-    public Long getOid(String code) {
-        return hospitalMapper.getOid(code);
-    }
+
 }

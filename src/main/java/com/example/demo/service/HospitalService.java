@@ -17,5 +17,5 @@ public interface HospitalService {
 
     Hospital findOneByCode(String code);
 
-    Long getOid(String code);
+    List<Hospital> findAll();
 }

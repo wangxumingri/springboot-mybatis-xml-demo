@@ -51,6 +51,7 @@ public class UserController {
         try {
             User user = userMapper.selectById(oid);
             baseResponse.setResultMessage(ResponseEnums.Success.getDesc());
+            baseResponse.setResultCode(ResponseEnums.Success.getCode());
             baseResponse.setResultContent(user);
         } catch (Exception e) {
             baseResponse.setResultCode(ResponseEnums.Fail.getCode());

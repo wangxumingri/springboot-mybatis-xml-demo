@@ -12,17 +12,17 @@ import java.util.List;
  * Author:Created by wx on 2019/12/31
  * Desc:
  */
-//@Mapper
 public interface HospitalMapper {
-//    @Insert("INSERT INTO bl_hospital ()")
     Long addOne(Hospital hospital);
 
     void update(Hospital hospital);
 
     Hospital findOneByOid(Long oid);
 
-//    @Select("SELECT * FROM bl_hospital WHERE code=#{code}")
-    Hospital findOneByCode(@Param("code") String code);
+    Hospital findOneByCode(String code);
 
-    Long getOid(String code);
+    List<Hospital> findAll();
+
+    void delete(Long oid);
+//    Long getOid(String code);
 }

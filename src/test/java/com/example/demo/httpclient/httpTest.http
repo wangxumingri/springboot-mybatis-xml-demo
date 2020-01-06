@@ -1,0 +1,40 @@
+### 新增医院
+POST http://localhost:10000/mybatis/xml/hospital/addOne
+Content-Type: application/json
+
+{
+  "name": "第二公疗医院",
+  "status": "Active",
+  "code": "Public_2_people",
+  "createdOn": "2020-01-06 12:08:35",
+  "updatedOn": null
+}
+
+
+### 根据code查询医院
+GET http://localhost:10000/mybatis/xml/hospital/findOne/Test_people
+
+
+### 根据oid查询医院
+
+GET http://localhost:10000/mybatis/xml/hospital/findOne?oid=1
+
+
+### 查询所有医院
+
+GET http://localhost:10000/mybatis/xml/hospital/findAll
+
+
+### 根据oid 修改医院
+
+POST http://localhost:10000/mybatis/xml/hospital/update
+Content-Type: application/json
+
+{
+  "oid": 3,
+  "name": "第一公疗医院",
+  "status": "Active",
+  "code": "Public_1_people",
+  "createdOn": "2020-01-06 11:31:35",
+  "updatedOn": null
+}
