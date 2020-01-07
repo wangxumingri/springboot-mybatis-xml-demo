@@ -17,7 +17,7 @@ import java.util.List;
 public class MybatisTest {
     public static void main(String[] args) throws IOException {
         SqlSessionFactoryBuilder sqlSessionFactoryBuilder = new SqlSessionFactoryBuilder();
-        SqlSessionFactory sqlSessionFactory = sqlSessionFactoryBuilder.build(Resources.getResourceAsStream("mybatis/config/mybatis-config_2.xml"));
+        SqlSessionFactory sqlSessionFactory = sqlSessionFactoryBuilder.build(Resources.getResourceAsStream("mybatis/config/mybatis-config_3.xml"));
         SqlSession sqlSession = sqlSessionFactory.openSession();
         HospitalMapper mapper = sqlSession.getMapper(HospitalMapper.class);
         List<Hospital> all = mapper.findAll();
