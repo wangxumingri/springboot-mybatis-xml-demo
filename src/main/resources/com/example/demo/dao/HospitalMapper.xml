@@ -11,6 +11,7 @@
         <result property="createdOn" column="createdOn" javaType="java.util.Date" jdbcType="TIMESTAMP"/>
         <result property="updatedOn" column="updatedOn" javaType="java.util.Date" jdbcType="TIMESTAMP"/>
     </resultMap>
+
     <insert id="addOne" parameterType="Hospital" useGeneratedKeys="true" keyProperty="oid">
         INSERT INTO
             bl_hospital

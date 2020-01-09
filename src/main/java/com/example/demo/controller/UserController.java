@@ -11,6 +11,7 @@ import com.example.demo.service.HospitalService;
 import com.example.demo.utils.ResponseUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.time.DateUtils;
+import org.apache.ibatis.session.RowBounds;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Controller;
@@ -113,6 +114,20 @@ public class UserController {
             pageParam.setStart(Integer.parseInt(start));
             pageParam.setLimit(Integer.parseInt(limit));
             List<User> userList = userMapper.findByMix(userQueryParam, pageParam);
+            baseResponse = ResponseUtil.responseSuccess(userList);
+        } catch (Exception e) {
+            baseResponse = ResponseUtil.responseErrot(e.getMessage());
+        }
+        return baseResponse;
+    }
+
+    @RequestMapping(path = "/findByPageWithRowBounds", method = RequestMethod.GET, produces = "application/json;charset=UTF-8")
+    @ResponseBody
+    public BaseResponse findByPageWithRowBounds(@RequestParam("hospitalCode") String hopsitalCode) {
+        BaseResponse baseResponse = new BaseResponse();
+        try {
+            RowBounds rowBounds = new RowBounds(2,3);
+            List<User> userList = userMapper.findByPageWithRowBounds(hopsitalCode,rowBounds);
             baseResponse = ResponseUtil.responseSuccess(userList);
         } catch (Exception e) {
             baseResponse = ResponseUtil.responseErrot(e.getMessage());

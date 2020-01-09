@@ -47,5 +47,8 @@ Content-Type: application/json
 
 GET http://localhost:10000/mybatis/xml/user/findByMix?hospitalCode=Test_people&start=0&limit=2
 
-###
+### 使用RowBounds实现分页查询
 
+GET http://localhost:10000/mybatis/xml/user/findByPageWithRowBounds?hospitalCode=Test_people
+
+###

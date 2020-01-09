@@ -10,6 +10,11 @@
         <result property="birthDay" column="birthDay" javaType="java.util.Date" jdbcType="DATE"/>
         <result property="mobile" column="mobile" javaType="java.lang.String" jdbcType="VARCHAR"/>
     </resultMap>
+
+    <sql id="cols">
+        (oid,createdOn,updatedOn,openId,hospitalCode,name,gender,age,cardNumber,birthDay,mobile)
+    </sql>
+
     <delete id="deleteById">
         delete from bl_user where oid=#{oid}
     </delete>
@@ -19,17 +24,22 @@
     </select>
 
     <insert id="save" parameterType="User" useGeneratedKeys="true" keyProperty="oid">
+            <selectKey keyProperty="oid" order="BEFORE" resultType="Long">
+                select if (max(oid) =null, 1, max(oid) + 3) from bl_user
+            </selectKey>
+
             INSERT INTO
                 bl_user
-                (createdOn,updatedOn,openId,hospitalCode,name,gender,age,cardNumber,birthDay,mobile)
+--                 (oid,createdOn,updatedOn,openId,hospitalCode,name,gender,age,cardNumber,birthDay,mobile)
+                <include refid="cols"/>
             VALUES
-                (#{createdOn},#{updatedOn},#{openId},#{hospitalCode},#{name},#{gender},#{age},#{cardNumber},#{birthDay},#{mobile});
+                (#{oid},#{createdOn},#{updatedOn},#{openId},#{hospitalCode},#{name},#{gender},#{age},#{cardNumber},#{birthDay},#{mobile});
     </insert>
 
 <!--    <insert id="save" parameterType="User" useGeneratedKeys="true" keyProperty="oid">-->
-<!--&lt;!&ndash;        <selectKey resultType="java.lang.Long" order="AFTER" keyProperty="oid">&ndash;&gt;-->
-<!--&lt;!&ndash;            SELECT LAST_INSERT_ID()&ndash;&gt;-->
-<!--&lt;!&ndash;        </selectKey>&ndash;&gt;-->
+<!--        <selectKey resultType="java.lang.Long" order="AFTER" keyProperty="oid">-->
+<!--            SELECT LAST_INSERT_ID()-->
+<!--        </selectKey>-->
 <!--        insert into bl_user-->
 <!--        <trim prefix="(" suffix=")" suffixOverrides=",">-->
 <!--            <if test="oid != null">-->
@@ -152,8 +162,15 @@
         limit #{page.start},#{page.limit}
     </select>
 
-
-
-
+    <!--使用混合方式，传递查询参数-->
+    <select id="findByPageWithRowBounds" resultMap="UserResultMap" >
+        select
+            *
+        from
+            bl_user
+        where
+            hospitalCode = #{hospitalCode}
+        order by createdOn asc
+    </select>
 
 </mapper>

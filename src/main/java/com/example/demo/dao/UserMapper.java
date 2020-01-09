@@ -5,6 +5,7 @@ import com.example.demo.entity.query.PageParam;
 import com.example.demo.entity.query.UserQueryParam;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.session.RowBounds;
 
 import java.util.List;
 import java.util.Map;
@@ -55,16 +56,39 @@ public interface UserMapper {
 
     /**
      * 使用Map传递多个查询参数
-     * 根据医院code和创建时间查询用户
      * @param parameters
      * @return
      */
     List<User> findByMap(Map<String,Object> parameters);
 
+    /**
+     * 使用@Param注解传递查询参数
+     * @param hospitalCode
+     * @return
+     */
     List<User> findByParamAnnotation(@Param("hospital") String hospitalCode);
 
+    /**
+     * 使用JavaBean传递查询参数
+     * @param userQueryParam
+     * @return
+     */
     List<User> findByPojo(UserQueryParam userQueryParam);
 
+    /**
+     * 混用注解和JavaBean传递查询参数
+     * @param userQueryParam
+     * @param pageParam
+     * @return
+     */
     List<User> findByMix(@Param(("user")) UserQueryParam userQueryParam, @Param("page") PageParam pageParam);
+
+    /**
+     * 使用mybatis的 RowBounds 实现分页查询
+     * @param hospitalCode
+     * @param rowBounds
+     * @return
+     */
+    List<User> findByPageWithRowBounds(String hospitalCode, RowBounds rowBounds);
 
 }
