@@ -12,6 +12,12 @@ import java.util.Date;
 @Data
 public class User {
     private Long oid;
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
+    private Date createdOn;// 创建时间
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
+    private Date updatedOn;// 更新时间
+    private String openId;// 微信openId
+    private String hospitalCode;// 医院code
     private String name; //姓名
     private String gender; // 性别，1男0女
     private Integer age;

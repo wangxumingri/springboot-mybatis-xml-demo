@@ -18,61 +18,68 @@
         select * from bl_user
     </select>
 
-
     <insert id="save" parameterType="User" useGeneratedKeys="true" keyProperty="oid">
-<!--        <selectKey resultType="java.lang.Long" order="AFTER" keyProperty="oid">-->
-<!--            SELECT LAST_INSERT_ID()-->
-<!--        </selectKey>-->
-        insert into bl_user
-        <trim prefix="(" suffix=")" suffixOverrides=",">
-            <if test="oid != null">
-                oid,
-            </if>
-            <if test="name != null">
-                name,
-            </if>
-            <if test="gender != null">
-                gender,
-            </if>
-
-            <if test="age != null">
-                age,
-            </if>
-            <if test="cardNumber != null">
-                cardNumber,
-            </if>
-            <if test="birthDay != null">
-                birthDay,
-            </if>
-            <if test="mobile != null">
-                mobile,
-            </if>
-        </trim>
-        <trim prefix="values (" suffix=")" suffixOverrides=",">
-            <if test="oid != null">
-                #{oid,jdbcType=BIGINT},
-            </if>
-            <if test="name != null">
-                #{name,jdbcType=VARCHAR},
-            </if>
-            <if test="gender != null">
-                #{gender,jdbcType=VARCHAR},
-            </if>
-            <if test="age != null">
-                #{age,jdbcType=INTEGER},
-            </if>
-            <if test="cardNumber != null">
-                #{cardNumber,jdbcType=VARCHAR},
-            </if>
-            <if test="birthDay != null">
-                #{birthDay,jdbcType=DATE},
-            </if>
-            <if test="mobile != null">
-                #{mobile,jdbcType=VARCHAR},
-            </if>
-        </trim>
-
+            INSERT INTO
+                bl_user
+                (createdOn,updatedOn,openId,hospitalCode,name,gender,age,cardNumber,birthDay,mobile)
+            VALUES
+                (#{createdOn},#{updatedOn},#{openId},#{hospitalCode},#{name},#{gender},#{age},#{cardNumber},#{birthDay},#{mobile});
     </insert>
+
+<!--    <insert id="save" parameterType="User" useGeneratedKeys="true" keyProperty="oid">-->
+<!--&lt;!&ndash;        <selectKey resultType="java.lang.Long" order="AFTER" keyProperty="oid">&ndash;&gt;-->
+<!--&lt;!&ndash;            SELECT LAST_INSERT_ID()&ndash;&gt;-->
+<!--&lt;!&ndash;        </selectKey>&ndash;&gt;-->
+<!--        insert into bl_user-->
+<!--        <trim prefix="(" suffix=")" suffixOverrides=",">-->
+<!--            <if test="oid != null">-->
+<!--                oid,-->
+<!--            </if>-->
+<!--            <if test="name != null">-->
+<!--                name,-->
+<!--            </if>-->
+<!--            <if test="gender != null">-->
+<!--                gender,-->
+<!--            </if>-->
+
+<!--            <if test="age != null">-->
+<!--                age,-->
+<!--            </if>-->
+<!--            <if test="cardNumber != null">-->
+<!--                cardNumber,-->
+<!--            </if>-->
+<!--            <if test="birthDay != null">-->
+<!--                birthDay,-->
+<!--            </if>-->
+<!--            <if test="mobile != null">-->
+<!--                mobile,-->
+<!--            </if>-->
+<!--        </trim>-->
+<!--        <trim prefix="values (" suffix=")" suffixOverrides=",">-->
+<!--            <if test="oid != null">-->
+<!--                #{oid,jdbcType=BIGINT},-->
+<!--            </if>-->
+<!--            <if test="name != null">-->
+<!--                #{name,jdbcType=VARCHAR},-->
+<!--            </if>-->
+<!--            <if test="gender != null">-->
+<!--                #{gender,jdbcType=VARCHAR},-->
+<!--            </if>-->
+<!--            <if test="age != null">-->
+<!--                #{age,jdbcType=INTEGER},-->
+<!--            </if>-->
+<!--            <if test="cardNumber != null">-->
+<!--                #{cardNumber,jdbcType=VARCHAR},-->
+<!--            </if>-->
+<!--            <if test="birthDay != null">-->
+<!--                #{birthDay,jdbcType=DATE},-->
+<!--            </if>-->
+<!--            <if test="mobile != null">-->
+<!--                #{mobile,jdbcType=VARCHAR},-->
+<!--            </if>-->
+<!--        </trim>-->
+
+<!--    </insert>-->
 
 
     <!--    <update id="update" parameterType="User" >-->
@@ -101,4 +108,52 @@
         from bl_user
         where oid = #{oid,jdbcType=BIGINT}
     </select>
+
+
+    <!--使用Map传递查询参数-->
+    <select id="findByMap" resultMap="UserResultMap" parameterType="map">
+        select
+            *
+        from
+            bl_user
+        where
+            hospitalCode = #{hospitalCode};
+    </select>
+
+    <!--使用@Param注解传递查询参数，占位符要和注解的value保持一致-->
+    <select id="findByParamAnnotation" resultMap="UserResultMap" >
+        select
+            *
+        from
+            bl_user
+        where
+            hospitalCode = #{hospital};
+    </select>
+
+    <!--使用JavaBean传递查询参数，多个bean，不需要parameterType属性-->
+    <select id="findByPojo" resultMap="UserResultMap" parameterType="UserQueryParam">
+        select
+            *
+        from
+            bl_user
+        where
+            hospitalCode = #{hospitalCode};
+    </select>
+    <!--使用混合方式，传递查询参数-->
+    <select id="findByMix" resultMap="UserResultMap" >
+        select
+            *
+        from
+            bl_user
+        where
+            hospitalCode = #{user.hospitalCode}
+        order by createdOn asc
+
+        limit #{page.start},#{page.limit}
+    </select>
+
+
+
+
+
 </mapper>
