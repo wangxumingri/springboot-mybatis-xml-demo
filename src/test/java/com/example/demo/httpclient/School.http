@@ -1,0 +1,54 @@
+# For a quick start check out our HTTP Requests collection (Tools|HTTP Client|Open HTTP Requests Collection).
+#
+# Following HTTP Request Live Templates are available:
+# * 'gtrp' and 'gtr' create a GET request with or without query parameters;
+# * 'ptr' and 'ptrp' create a POST request with a simple or parameter-like body;
+# * 'mptr' and 'fptr' create a POST request to submit a form with a text or file field (multipart/form-data);
+
+POST  http://localhost:10000/mybatis/xml/school/addOne
+Content-Type: application/json
+
+{
+  "createdOn": 1578562657185,
+  "updatedOn": null,
+  "openId": null,
+  "hospitalCode": "Test_people",
+  "name": "测试人员12",
+  "gender": "0",
+  "age": 17,
+  "cardNumber": null,
+  "birthDay": "2019-11-11",
+  "mobile": null
+}
+
+###
+GET http://localhost:10000/mybatis/xml/school/findOne/1
+Accept: application/json
+
+###
+GET http://localhost:10000/mybatis/xml/school/findByMap?hospitalCode=Test_people&queryTime=1578556044064&date=2019-11-11
+Accept: application/json
+
+###
+GET http://localhost:10000/mybatis/xml/school/findByParamAnnotation?hospitalCode=Test_people&queryTime=1578556044064&date=2019-11-11
+Accept: application/json
+
+###
+GET http://localhost:10000/mybatis/xml/school/findByPojo?hospitalCode=Test_people
+Content-Type: application/json
+
+{
+  "hospitalCode": "Test_people",
+  "name": "str",
+  "mobile": "str"
+}
+
+###
+
+GET http://localhost:10000/mybatis/xml/school/findByMix?hospitalCode=Test_people&start=0&limit=2
+
+### 使用RowBounds实现分页查询
+
+GET http://localhost:10000/mybatis/xml/school/findByPageWithRowBounds?hospitalCode=Test_people
+
+###

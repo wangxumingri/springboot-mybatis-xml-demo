@@ -1,0 +1,674 @@
+GET http://localhost:10000/mybatis/xml/school/findOne/1
+Accept: application/json
+
+<> 2020-01-10T034702.200.json
+
+###
+
+GET http://localhost:10000/mybatis/xml/school/findOne/1
+Accept: application/json
+
+<> 2020-01-10T034402.200.json
+
+###
+
+GET http://localhost:10000/mybatis/xml/school/findOne/1
+Accept: application/json
+
+<> 2020-01-10T033900.200.json
+
+###
+
+GET http://localhost:10000/mybatis/xml/school/findOne/1
+Accept: application/json
+
+<> 2020-01-10T033757.200.json
+
+###
+
+POST http://localhost:10000/mybatis/xml/user/addOne
+Content-Type: application/json
+
+{
+  "createdOn": 1578562657185,
+  "updatedOn": null,
+  "openId": null,
+  "hospitalCode": "Test_people",
+  "name": "测试人员12",
+  "gender": "0",
+  "age": 17,
+  "cardNumber": null,
+  "birthDay": "2019-11-11",
+  "mobile": null
+}
+
+<> 2020-01-09T072253.200.json
+
+###
+
+POST http://localhost:10000/mybatis/xml/user/addOne
+Content-Type: application/json
+
+{
+  "createdOn": 1578562657185,
+  "updatedOn": null,
+  "openId": null,
+  "hospitalCode": "Test_people",
+  "name": "测试人员12",
+  "gender": "0",
+  "age": 17,
+  "cardNumber": null,
+  "birthDay": "2019-11-11",
+  "mobile": null
+}
+
+<> 2020-01-09T072225.200.json
+
+###
+
+POST http://localhost:10000/mybatis/xml/user/addOne
+Content-Type: application/json
+
+{
+  "createdOn": 1578562657185,
+  "updatedOn": null,
+  "openId": null,
+  "hospitalCode": "Test_people",
+  "name": "测试人员12",
+  "gender": "0",
+  "age": 17,
+  "cardNumber": null,
+  "birthDay": "2019-11-11",
+  "mobile": null
+}
+
+<> 2020-01-09T072142.200.json
+
+###
+
+POST http://localhost:10000/mybatis/xml/user/addOne
+Content-Type: application/json
+
+{
+  "createdOn": 1578562657185,
+  "updatedOn": null,
+  "openId": null,
+  "hospitalCode": "Test_people",
+  "name": "测试人员12",
+  "gender": "0",
+  "age": 17,
+  "cardNumber": null,
+  "birthDay": "2019-11-11",
+  "mobile": null
+}
+
+<> 2020-01-09T070837.200.json
+
+###
+
+POST http://localhost:10000/mybatis/xml/user/addOne
+Content-Type: application/json
+
+{
+  "createdOn": 1578562657185,
+  "updatedOn": null,
+  "openId": null,
+  "hospitalCode": "Test_people",
+  "name": "测试人员12",
+  "gender": "0",
+  "age": 17,
+  "cardNumber": null,
+  "birthDay": "2019-11-11",
+  "mobile": null
+}
+
+<> 2020-01-09T070645.200.json
+
+###
+
+POST http://localhost:10000/mybatis/xml/user/addOne
+Content-Type: application/json
+
+{
+  "createdOn": 1578562657185,
+  "updatedOn": null,
+  "openId": null,
+  "hospitalCode": "Test_people",
+  "name": "测试人员12",
+  "gender": "0",
+  "age": 17,
+  "cardNumber": null,
+  "birthDay": "2019-11-11",
+  "mobile": null
+}
+
+<> 2020-01-09T070537.200.json
+
+###
+
+POST http://localhost:10000/mybatis/xml/user/addOne
+Content-Type: application/json
+
+{
+  "createdOn": 1578562657185,
+  "updatedOn": null,
+  "openId": null,
+  "hospitalCode": "Test_people",
+  "name": "测试人员12",
+  "gender": "0",
+  "age": 17,
+  "cardNumber": null,
+  "birthDay": "2019-11-11",
+  "mobile": null
+}
+
+<> 2020-01-09T070501.200.json
+
+###
+
+POST http://localhost:10000/mybatis/xml/user/addOne
+Content-Type: application/json
+
+{
+  "createdOn": 1578562657185,
+  "updatedOn": null,
+  "openId": null,
+  "hospitalCode": "Test_people",
+  "name": "测试人员12",
+  "gender": "0",
+  "age": 17,
+  "cardNumber": null,
+  "birthDay": "2019-11-11",
+  "mobile": null
+}
+
+<> 2020-01-09T070400.200.json
+
+###
+
+POST http://localhost:10000/mybatis/xml/user/addOne
+Content-Type: application/json
+
+{
+  "createdOn": 1578562657185,
+  "updatedOn": null,
+  "openId": null,
+  "hospitalCode": "Test_people",
+  "name": "测试人员12",
+  "gender": "0",
+  "age": 17,
+  "cardNumber": null,
+  "birthDay": "2019-11-11",
+  "mobile": null
+}
+
+<> 2020-01-09T070315.200.json
+
+###
+
+POST http://localhost:10000/mybatis/xml/user/addOne
+Content-Type: application/json
+
+{
+  "createdOn": 1578562657185,
+  "updatedOn": null,
+  "openId": null,
+  "hospitalCode": "Test_people",
+  "name": "测试人员12",
+  "gender": "0",
+  "age": 17,
+  "cardNumber": null,
+  "birthDay": "2019-11-11",
+  "mobile": null
+}
+
+<> 2020-01-09T070055.200.json
+
+###
+
+POST http://localhost:10000/mybatis/xml/user/addOne
+Content-Type: application/json
+
+{
+  "createdOn": 1578562657185,
+  "updatedOn": null,
+  "openId": null,
+  "hospitalCode": "Test_people",
+  "name": "测试人员12",
+  "gender": "0",
+  "age": 17,
+  "cardNumber": null,
+  "birthDay": "2019-11-11",
+  "mobile": null
+}
+
+<> 2020-01-09T065449.200.json
+
+###
+
+POST http://localhost:10000/mybatis/xml/user/addOne
+Content-Type: application/json
+
+{
+  "createdOn": 1578562657185,
+  "updatedOn": null,
+  "openId": null,
+  "hospitalCode": "Test_people",
+  "name": "测试人员12",
+  "gender": "0",
+  "age": 17,
+  "cardNumber": null,
+  "birthDay": "2019-11-11",
+  "mobile": null
+}
+
+<> 2020-01-09T064122.200.json
+
+###
+
+POST http://localhost:10000/mybatis/xml/user/addOne
+Content-Type: application/json
+
+{
+  "createdOn": 1578562657185,
+  "updatedOn": null,
+  "openId": null,
+  "hospitalCode": "Test_people",
+  "name": "测试人员12",
+  "gender": "0",
+  "age": 17,
+  "cardNumber": null,
+  "birthDay": "2019-11-11",
+  "mobile": null
+}
+
+<> 2020-01-09T064053.200.json
+
+###
+
+POST http://localhost:10000/mybatis/xml/user/addOne
+Content-Type: application/json
+
+{
+  "oid": 20,
+  "createdOn": 1578562657185,
+  "updatedOn": null,
+  "openId": null,
+  "hospitalCode": "Test_people",
+  "name": "测试人员12",
+  "gender": "0",
+  "age": 17,
+  "cardNumber": null,
+  "birthDay": "2019-11-11",
+  "mobile": null
+}
+
+<> 2020-01-09T063957.200.json
+
+###
+
+POST http://localhost:10000/mybatis/xml/user/addOne
+Content-Type: application/json
+
+{
+  "createdOn": 1578562657185,
+  "updatedOn": null,
+  "openId": null,
+  "hospitalCode": "Test_people",
+  "name": "测试人员12",
+  "gender": "0",
+  "age": 17,
+  "cardNumber": null,
+  "birthDay": "2019-11-11",
+  "mobile": null
+}
+
+<> 2020-01-09T063934.200.json
+
+###
+
+POST http://localhost:10000/mybatis/xml/user/addOne
+Content-Type: application/json
+
+{
+  "createdOn": 1578562657185,
+  "updatedOn": null,
+  "openId": null,
+  "hospitalCode": "Test_people",
+  "name": "测试人员12",
+  "gender": "0",
+  "age": 17,
+  "cardNumber": null,
+  "birthDay": "2019-11-11",
+  "mobile": null
+}
+
+<> 2020-01-09T063635.200.json
+
+###
+
+GET http://localhost:10000/mybatis/xml/user/findByPageWithRowBounds?hospitalCode=Test_people
+
+<> 2020-01-09T061705.200.json
+
+###
+
+GET http://localhost:10000/mybatis/xml/user/findByPageWithRowBounds?hospitalCode=Test_people
+
+<> 2020-01-09T061657.200.json
+
+###
+
+GET http://localhost:10000/mybatis/xml/user/findByPageWithRowBounds?hospitalCode=Test_people
+
+<> 2020-01-09T061645.200.json
+
+###
+
+GET http://localhost:10000/mybatis/xml/user/findByMix?hospitalCode=Test_people&start=0&limit=2
+
+<> 2020-01-09T055444.200.json
+
+###
+
+GET http://localhost:10000/mybatis/xml/user/findByMix?hospitalCode=Test_people&start=1
+
+<> 2020-01-09T055430.200.json
+
+###
+
+GET http://localhost:10000/mybatis/xml/user/findByMix?hospitalCode=Test_people&start=0
+
+<> 2020-01-09T055419.200.json
+
+###
+
+GET http://localhost:10000/mybatis/xml/user/findByMix?hospitalCode=Test_people&start=3
+
+<> 2020-01-09T055123.200.json
+
+###
+
+GET http://localhost:10000/mybatis/xml/user/findByMix?hospitalCode=Test_people&start=3
+
+<> 2020-01-09T055055.200.json
+
+###
+
+GET http://localhost:10000/mybatis/xml/user/findByMix?hospitalCode=Test_people&start=2
+
+<> 2020-01-09T055028.200.json
+
+###
+
+GET http://localhost:10000/mybatis/xml/user/findByMix?hospitalCode=Test_people
+
+<> 2020-01-09T055002.200.json
+
+###
+
+GET http://localhost:10000/mybatis/xml/user/findByMix?hospitalCode=Test_people
+
+<> 2020-01-09T054954.200.json
+
+###
+
+GET http://localhost:10000/mybatis/xml/user/findByMix?hospitalCode=Test_people
+
+<> 2020-01-09T053837.200.json
+
+###
+
+POST http://localhost:10000/mybatis/xml/user/addOne
+Content-Type: application/json
+
+{
+  "createdOn": 1578562657185,
+  "updatedOn": null,
+  "openId": null,
+  "hospitalCode": "Test_people",
+  "name": "测试人员12",
+  "gender": "0",
+  "age": 17,
+  "cardNumber": null,
+  "birthDay": "2019-11-11",
+  "mobile": null
+}
+
+<> 2020-01-09T053810.200.json
+
+###
+
+POST http://localhost:10000/mybatis/xml/user/addOne
+Content-Type: application/json
+
+{
+  "createdOn": 1578562657185,
+  "updatedOn": null,
+  "openId": null,
+  "hospitalCode": "Test_people",
+  "name": "测试人员11",
+  "gender": "0",
+  "age": 57,
+  "cardNumber": null,
+  "birthDay": "2019-11-11",
+  "mobile": null
+}
+
+<> 2020-01-09T053745.200.json
+
+###
+
+GET http://localhost:10000/mybatis/xml/user/findByMix?hospitalCode=Test_people
+
+<> 2020-01-09T053641.200.json
+
+###
+
+POST http://localhost:10000/mybatis/xml/user/addOne
+Content-Type: application/json
+
+{
+  "createdOn": 1578562311938,
+  "updatedOn": null,
+  "openId": null,
+  "hospitalCode": "Public_2_people",
+  "name": "测试人员10",
+  "gender": "0",
+  "age": 57,
+  "cardNumber": null,
+  "birthDay": "2019-11-11",
+  "mobile": null
+}
+
+<> 2020-01-09T053259.200.json
+
+###
+
+POST http://localhost:10000/mybatis/xml/user/addOne
+Content-Type: application/json
+
+{
+  "createdOn": 1578562311938,
+  "updatedOn": null,
+  "openId": null,
+  "hospitalCode": "Public_2_people",
+  "name": "测试人员9",
+  "gender": "0",
+  "age": 57,
+  "cardNumber": null,
+  "birthDay": "2019-11-11",
+  "mobile": null
+}
+
+<> 2020-01-09T053250.200.json
+
+###
+
+POST http://localhost:10000/mybatis/xml/user/addOne
+Content-Type: application/json
+
+{
+  "createdOn": 1578562311938,
+  "updatedOn": null,
+  "openId": null,
+  "hospitalCode": "Public_1_people",
+  "name": "测试人员8",
+  "gender": "0",
+  "age": 50,
+  "cardNumber": null,
+  "birthDay": "2019-11-11",
+  "mobile": null
+}
+
+<> 2020-01-09T053239.200.json
+
+###
+
+POST http://localhost:10000/mybatis/xml/user/addOne
+Content-Type: application/json
+
+{
+  "createdOn": 1578562311938,
+  "updatedOn": null,
+  "openId": null,
+  "hospitalCode": "Public_1_people",
+  "name": "测试人员7",
+  "gender": "0",
+  "age": 20,
+  "cardNumber": null,
+  "birthDay": "2019-11-11",
+  "mobile": null
+}
+
+<> 2020-01-09T053227.200.json
+
+###
+
+POST http://localhost:10000/mybatis/xml/user/addOne
+Content-Type: application/json
+
+{
+  "createdOn": 1578562311938,
+  "updatedOn": null,
+  "openId": null,
+  "hospitalCode": "Public_1_people",
+  "name": "测试人员6",
+  "gender": "0",
+  "age": 30,
+  "cardNumber": null,
+  "birthDay": "2019-11-11",
+  "mobile": null
+}
+
+<> 2020-01-09T053215.200.json
+
+###
+
+POST http://localhost:10000/mybatis/xml/user/addOne
+Content-Type: application/json
+
+{
+  "createdOn": 1578562311938,
+  "updatedOn": null,
+  "openId": null,
+  "hospitalCode": "SH10_people",
+  "name": "测试人员5",
+  "gender": "0",
+  "age": 16,
+  "cardNumber": null,
+  "birthDay": "2019-11-11",
+  "mobile": null
+}
+
+<> 2020-01-09T053156.200.json
+
+###
+
+POST http://localhost:10000/mybatis/xml/user/addOne
+Content-Type: application/json
+
+{
+  "createdOn": 1578562244228,
+  "updatedOn": null,
+  "openId": null,
+  "hospitalCode": "Test_people",
+  "name": "测试人员3",
+  "gender": "1",
+  "age": 16,
+  "cardNumber": null,
+  "birthDay": "2019-11-11",
+  "mobile": null
+}
+
+<> 2020-01-09T053058.200.json
+
+###
+
+GET http://localhost:10000/mybatis/xml/user/findByPojo?hospitalCode=Test_people
+Content-Type: application/json
+
+{
+  "hospitalCode": "Test_people",
+  "name": "str",
+  "mobile": "str"
+}
+
+<> 2020-01-09T052754.200.json
+
+###
+
+GET http://localhost:10000/mybatis/xml/user/findByPojo?hospitalCode=Test_people
+Content-Type: application/json
+
+{
+  "oid": 0,
+  "hospitalCode": "str",
+  "name": "str",
+  "mobile": "str"
+}
+
+<> 2020-01-09T052707.200.json
+
+###
+
+GET http://localhost:10000/mybatis/xml/user/findByPojo?hospitalCode=Test_people
+{"oid": 0,"hospitalCode":"str","name":"str","mobile":"str"}
+
+<> 2020-01-09T052640.400.html
+
+###
+
+GET http://localhost:10000/mybatis/xml/user/findByParamAnnotation?hospitalCode=Test_people&queryTime=1578556044064&date=2019-11-11
+Accept: application/json
+
+<> 2020-01-09T052505.200.json
+
+###
+
+GET http://localhost:10000/mybatis/xml/user/findByMap?hospitalCode=Test_people&queryTime=1578556044064&date=2019-11-11
+Accept: application/json
+
+<> 2020-01-09T052428.200.json
+
+###
+
+GET http://localhost:10000/mybatis/xml/user/findByMap?hospitalCode=Test_people&queryTime=1578556044064&date=2019-11-11
+Accept: application/json
+
+<> 2020-01-09T052338.200.json
+
+###
+
+GET http://localhost:10000/mybatis/xml/user/findByMap?hospitalCode=Test_people&queryTime=1578556044064&date=2019-11-11
+Accept: application/json
+
+<> 2020-01-09T052304.200.json
+
+###
+
+GET http://localhost:10000/mybatis/xml/user/findByHospitalCodeAndCreatedOn?hospitalCode=Test_people&queryTime=1578556044064&date=2019-11-11
+Accept: application/json
+
+<> 2020-01-09T052246.404.json
+

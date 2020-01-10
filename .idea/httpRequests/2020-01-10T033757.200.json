@@ -1,0 +1,5 @@
+{
+  "resultCode": "fail",
+  "resultMessage": "处理识别",
+  "resultContent": "Could not find result map com.example.demo.dao.TeacherMapper.SchoolResultMap"
+}

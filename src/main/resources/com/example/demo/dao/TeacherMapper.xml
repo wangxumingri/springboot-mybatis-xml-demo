@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.dao.TeacherMapper">
+    <resultMap id="TeacherResultMap" type="Teacher">
+        <id property="id" column="id" javaType="java.lang.Long" jdbcType="BIGINT"/>
+        <id property="schoolId" column="schoolId" javaType="java.lang.Long" jdbcType="BIGINT"/>
+        <result property="createdOn" column="createdOn" javaType="java.util.Date" jdbcType="TIMESTAMP"/>
+        <result property="updatedOn" column="updatedOn" javaType="java.util.Date" jdbcType="TIMESTAMP"/>
+        <result property="name" column="name" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result property="type" column="type" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result property="headmaster" column="headmaster" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+        <result property="number" column="number" javaType="java.lang.String" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <delete id="deleteById">
+        delete from teacher where id=#{oid}
+    </delete>
+
+    <select id="findAll" resultMap="TeacherResultMap">
+        select * from teacher
+    </select>
+
+    <insert id="save" parameterType="teacher" useGeneratedKeys="true" keyProperty="id">
+            INSERT INTO
+                teacher
+                (schoolId,createdOn,updatedOn,name,type,headmaster,number)
+            VALUES
+                (#{createdOn},#{updatedOn},#{name},#{code},#{status});
+    </insert>
+
+    <select id="findOneById" resultMap="TeacherResultMap">
+        select
+            *
+        from teacher
+        where id = #{id,jdbcType=BIGINT}
+    </select>
+
+    <select id="findAllBySchoolId" resultMap="TeacherResultMap">
+        select
+            *
+        from teacher
+        where schoolId = #{schoolId,jdbcType=BIGINT}
+    </select>
+
+    <select id="findOneBySchoolIdAndNumber" resultMap="TeacherResultMap" >
+        select
+            *
+        from
+            teacher
+        where
+            schoolId = #{schoolId}
+        AND
+            number =#{number}
+    </select>
+
+    <update id="update" parameterType="teacher">
+        update
+            teacher
+        set
+            schoolId=#{schoolId}
+            createdOn = #{createdOn}
+            updatedOn = #{updatedOn},
+            name=#{name},
+            type=#{type},
+            headmaster=#{headmaster},
+            number=#{number}
+        where
+            id = #{id}
+    </update>
+</mapper>
