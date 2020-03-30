@@ -1,3 +1,47 @@
+GET http://localhost:10000/mybatis/xml/hospital/addAndReturnId
+
+###
+
+GET http://localhost:10000/mybatis/xml/hospital/addAndReturnId
+
+###
+
+GET http://localhost:10000/mybatis/xml/hospital/addAndReturnId
+
+<> 2020-03-30T015741.200.json
+
+###
+
+GET http://localhost:10000/mybatis/xml/hospital/addAndReturnId
+
+<> 2020-03-30T015129.200.json
+
+###
+
+GET http://localhost:10000/mybatis/xml/hospital/addAndReturnId
+
+<> 2020-03-30T014919.200.json
+
+###
+
+GET http://localhost:10000/mybatis/xml/hospital/findAll
+
+<> 2020-03-08T040846.200.json
+
+###
+
+GET http://localhost:10000/mybatis/xml/hospital/findAll
+
+<> 2020-03-08T040457.200.json
+
+###
+
+GET http://localhost:10000/mybatis/xml/hospital/findOne/Test_people
+
+<> 2020-03-08T040450.200.json
+
+###
+
 GET http://localhost:10000/mybatis/xml/school/findOne/1
 Accept: application/json
 
@@ -602,73 +646,4 @@ Content-Type: application/json
 }
 
 <> 2020-01-09T053058.200.json
-
-###
-
-GET http://localhost:10000/mybatis/xml/user/findByPojo?hospitalCode=Test_people
-Content-Type: application/json
-
-{
-  "hospitalCode": "Test_people",
-  "name": "str",
-  "mobile": "str"
-}
-
-<> 2020-01-09T052754.200.json
-
-###
-
-GET http://localhost:10000/mybatis/xml/user/findByPojo?hospitalCode=Test_people
-Content-Type: application/json
-
-{
-  "oid": 0,
-  "hospitalCode": "str",
-  "name": "str",
-  "mobile": "str"
-}
-
-<> 2020-01-09T052707.200.json
-
-###
-
-GET http://localhost:10000/mybatis/xml/user/findByPojo?hospitalCode=Test_people
-{"oid": 0,"hospitalCode":"str","name":"str","mobile":"str"}
-
-<> 2020-01-09T052640.400.html
-
-###
-
-GET http://localhost:10000/mybatis/xml/user/findByParamAnnotation?hospitalCode=Test_people&queryTime=1578556044064&date=2019-11-11
-Accept: application/json
-
-<> 2020-01-09T052505.200.json
-
-###
-
-GET http://localhost:10000/mybatis/xml/user/findByMap?hospitalCode=Test_people&queryTime=1578556044064&date=2019-11-11
-Accept: application/json
-
-<> 2020-01-09T052428.200.json
-
-###
-
-GET http://localhost:10000/mybatis/xml/user/findByMap?hospitalCode=Test_people&queryTime=1578556044064&date=2019-11-11
-Accept: application/json
-
-<> 2020-01-09T052338.200.json
-
-###
-
-GET http://localhost:10000/mybatis/xml/user/findByMap?hospitalCode=Test_people&queryTime=1578556044064&date=2019-11-11
-Accept: application/json
-
-<> 2020-01-09T052304.200.json
-
-###
-
-GET http://localhost:10000/mybatis/xml/user/findByHospitalCodeAndCreatedOn?hospitalCode=Test_people&queryTime=1578556044064&date=2019-11-11
-Accept: application/json
-
-<> 2020-01-09T052246.404.json
 

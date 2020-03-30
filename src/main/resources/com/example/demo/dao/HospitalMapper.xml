@@ -18,6 +18,7 @@
             (name,status,code,createdOn,updatedOn)
         VALUES
             (#{name},#{status},#{code},#{createdOn},#{updatedOn});
+
     </insert>
 
     <update id="update" parameterType="Hospital">
@@ -66,6 +67,26 @@
         FROM
             bl_hospital;
     </select>
+    
+    
+<!--    <insert id="addAndReturnId" parameterType="Hospital" statementType="CALLABLE">-->
+<!--        {-->
+<!--            call addAndReturnId(#{oid,mode=OUT,jdbcType=BIGINT},#{createdOn,mode=IN},#{name,mode=IN},#{code,mode=IN},#{status,mode=IN})-->
+<!--		}-->
+<!--    </insert>-->
+    
+    
+<!--    <parameterMap id="paramMapForAddAndReturnId" type="java.util.Map">-->
+<!--        <parameter property="result" mode="OUT" jdbcType="BIGINT" javaType="Long" />-->
+<!--        <parameter property="createdOn" mode="IN" jdbcType="TIMESTAMP" javaType="java.util.Date" />-->
+<!--        <parameter property="name" mode="IN" jdbcType="VARCHAR" javaType="java.lang.String" />-->
+<!--        <parameter property="code" mode="IN" jdbcType="VARCHAR" javaType="java.lang.String" />-->
+<!--        <parameter property="status" mode="IN" jdbcType="VARCHAR" javaType="java.lang.String" />-->
+<!--    </parameterMap>-->
+<!--    <insert id="addAndReturnId" statementType="CALLABLE" parameterMap="paramMapForAddAndReturnId">-->
+<!--        {CALL addAndReturnId(?,?,?,?,?)}-->
+<!--    </insert>-->
+    
 
 </mapper>
 
