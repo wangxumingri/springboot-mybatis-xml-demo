@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.dao.CouponTemplateMapper">
+  <resultMap id="BaseResultMap" type="com.example.demo.entity.CouponTemplate">
+    <!--@mbg.generated-->
+    <!--@Table coupon_template-->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="coupon_name" jdbcType="VARCHAR" property="couponName" />
+    <result column="receieve_start" jdbcType="TIMESTAMP" property="receieveStart" />
+    <result column="receieve_end" jdbcType="TIMESTAMP" property="receieveEnd" />
+    <result column="gmt_create" jdbcType="TIMESTAMP" property="gmtCreate" />
+    <result column="gmt_update" jdbcType="TIMESTAMP" property="gmtUpdate" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, coupon_name, receieve_start, receieve_end, gmt_create, gmt_update
+  </sql>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select <include refid="Base_Column_List"/> from coupon_template
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from coupon_template
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    <!--@mbg.generated-->
+    delete from coupon_template
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.example.demo.entity.CouponTemplate" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into coupon_template (coupon_name, receieve_start, receieve_end, 
+      gmt_create, gmt_update)
+    values (#{couponName,jdbcType=VARCHAR}, #{receieveStart,jdbcType=TIMESTAMP}, #{receieveEnd,jdbcType=TIMESTAMP}, 
+      #{gmtCreate,jdbcType=TIMESTAMP}, #{gmtUpdate,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.example.demo.entity.CouponTemplate" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into coupon_template
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="couponName != null">
+        coupon_name,
+      </if>
+      <if test="receieveStart != null">
+        receieve_start,
+      </if>
+      <if test="receieveEnd != null">
+        receieve_end,
+      </if>
+      <if test="gmtCreate != null">
+        gmt_create,
+      </if>
+      <if test="gmtUpdate != null">
+        gmt_update,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="couponName != null">
+        #{couponName,jdbcType=VARCHAR},
+      </if>
+      <if test="receieveStart != null">
+        #{receieveStart,jdbcType=TIMESTAMP},
+      </if>
+      <if test="receieveEnd != null">
+        #{receieveEnd,jdbcType=TIMESTAMP},
+      </if>
+      <if test="gmtCreate != null">
+        #{gmtCreate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="gmtUpdate != null">
+        #{gmtUpdate,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.demo.entity.CouponTemplate">
+    <!--@mbg.generated-->
+    update coupon_template
+    <set>
+      <if test="couponName != null">
+        coupon_name = #{couponName,jdbcType=VARCHAR},
+      </if>
+      <if test="receieveStart != null">
+        receieve_start = #{receieveStart,jdbcType=TIMESTAMP},
+      </if>
+      <if test="receieveEnd != null">
+        receieve_end = #{receieveEnd,jdbcType=TIMESTAMP},
+      </if>
+      <if test="gmtCreate != null">
+        gmt_create = #{gmtCreate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="gmtUpdate != null">
+        gmt_update = #{gmtUpdate,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.demo.entity.CouponTemplate">
+    <!--@mbg.generated-->
+    update coupon_template
+    set coupon_name = #{couponName,jdbcType=VARCHAR},
+      receieve_start = #{receieveStart,jdbcType=TIMESTAMP},
+      receieve_end = #{receieveEnd,jdbcType=TIMESTAMP},
+      gmt_create = #{gmtCreate,jdbcType=TIMESTAMP},
+      gmt_update = #{gmtUpdate,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

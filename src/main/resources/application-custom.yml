@@ -1,10 +1,15 @@
 spring:
   # 配置数据源
   datasource:
-    ds1:
-      url: jdbc:mysql://localhost:3306/demo1?useUnicode=true&characterEncoding=utf8&useSSL=true
+    old:
+      url: jdbc:mysql://localhost:3306/koala_crm?useUnicode=true&characterEncoding=utf8&useSSL=false
       username: root
-      password: admin13579
+      password: root
+      driver-class-name: com.mysql.jdbc.Driver
+    new:
+      url: jdbc:mysql://47.103.14.178:3306/koala_crm?useUnicode=true&characterEncoding=utf8&useSSL=false
+      username: root
+      password: 1qaz@WSX
       driver-class-name: com.mysql.jdbc.Driver
 
 # 配置web端口
@@ -14,7 +19,7 @@ server:
     context-path: /mybatis/xml
 
 mybatis:
-  mapper-locations: classpath:/mybatis/mapper/*.xml
+  mapper-locations: classpath:/mybatis/mapper/old/*.xml
   # mybatis全局配置文件位置
   config-location: classpath:/mybatis/config/mybatis-config.xml
 
